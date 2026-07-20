@@ -1,18 +1,18 @@
 # Industrial-Automation-Challenge
 
 
-| 방법             |   val acc | test acc |
-| -------------- | --------: | -------- |
-| Base           |     22.54 |          |
-| 단순 학습          |     24.64 |          |
-| Augmentation   |     53.86 |          |
-| **csreg**      | **57.09** |          |
-| csreg+listwise |     71.01 | 0.69     |
-|                |           |          |
+| 방법                       |   val acc | test acc |
+| ------------------------ | --------: | -------- |
+| Base                     |     22.54 |          |
+| 단순 학습                    |     24.64 |          |
+| Augmentation             |     53.86 |          |
+| **csreg**                | **57.09** |          |
+| csreg+listwise           |     71.01 | 0.69     |
+| +Threshold/abstain logit |           |          |
 
 
 ## csreg+listwise
-```
+```bash
 # 백업본, hdd3에 어댑터 없을때 다시 학습해야함
 cd /home/user1/SG/EQ
 
@@ -31,3 +31,16 @@ bash run.sh eval --tta 1
 | positive_failure_to_sensor | 330 | 83.6% |
 | positive_failure_to_sensor_nota | 104 | 0.96% |
 | positive_sensor_to_failure_nota | 96 | 0.0% |
+## +Threshold/abstain logit (NOTA 해결)
+```bash
+bash run.sh train
+bash run.sh train --overwrite-output-dir # 재실행 시 기존 폴더를 지우고 새로 시작(첫 실행이면 없어도 무방)
+
+bash run.sh eval --tta 1 --output-dir outputs/validation_nota
+
+# 결과 확인
+cat outputs/validation_nota/metrics.json
+column -s, -t outputs/validation_nota/metrics_by_family.csv
+
+
+```
