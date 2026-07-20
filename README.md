@@ -13,14 +13,14 @@
 
 ## csreg+listwise
 ```
-# 백업본, hdd3에 어댑터 없을때
+# 백업본, hdd3에 어댑터 없을때 다시 학습해야함
 cd /home/user1/SG/EQ
 
 # test submission (tta=1, ~30~40분)
-bash run.sh submit --adapter artifacts/csreg_listwise_qwen3_8b/final_adapter --tta 1
+bash run.sh submit --tta 1
 
 # val 평가 (tta=1)
-bash run.sh eval --adapter artifacts/csreg_listwise_qwen3_8b/final_adapter --tta 1
+bash run.sh eval --tta 1
 ```
 
 | Family | count | Acc |
