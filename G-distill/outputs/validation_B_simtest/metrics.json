@@ -1,0 +1,14 @@
+{
+  "n": 1242,
+  "accuracy": 0.8019323671497585,
+  "accuracy_percent": 80.19323671497585,
+  "bootstrap_95_ci": [
+    0.7801932367149759,
+    0.8236714975845411
+  ],
+  "macro_asset_accuracy": 0.8051791314000531,
+  "macro_family_accuracy": 0.8097618006993007,
+  "tta_permutations": 1,
+  "simulate_test": true,
+  "adapter": "/mnt/hdd3/user1/EQ_csreg_B_qwen3_8b/final_adapter"
+}
