@@ -1,0 +1,11 @@
+asset,count,mean
+steam turbine,82,0.6585365853658537
+industrial gas turbine,104,0.7115384615384616
+fan,80,0.7125
+electric motor,98,0.7653061224489796
+compressor,110,0.7909090909090909
+pump,66,0.803030303030303
+power transformer,380,0.8184210526315789
+aero gas turbine,108,0.8518518518518519
+electric generator,94,0.9042553191489362
+reciprocating internal combustion engine,120,0.9083333333333333
