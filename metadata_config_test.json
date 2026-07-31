@@ -1,0 +1,16 @@
+{
+  "dataset": {
+    "dataset_name": "industrial_automation_challenge_test",
+    "dataset_path": "data/test.jsonl",
+    "description": "Industrial Automation Challenge test questions"
+  },
+  "predictor": {
+    "path": "eq_predictor.py:predict"
+  },
+  "submission_columns": [
+    "id",
+    "answer"
+  ],
+  "output_dir": "competition_results",
+  "output_file": "submission.csv"
+}

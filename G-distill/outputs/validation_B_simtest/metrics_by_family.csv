@@ -1,7 +1,0 @@
-family,count,mean
-positive_failure_to_sensor,330,0.7606060606060606
-positive_sensor_to_failure,320,0.78125
-positive_sensor_to_failure_nota,96,0.7916666666666666
-positive_failure_to_sensor_nota,104,0.8269230769230769
-negation_failure_to_sensor,192,0.828125
-negation_sensor_to_failure,200,0.87
