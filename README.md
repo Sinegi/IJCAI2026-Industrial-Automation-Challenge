@@ -34,3 +34,15 @@ logits at the `<answer>` slot; it is trained never to write the letter as prose.
 `eq_predictor.py` reads that back from `adapter/csreg_config.json` and decodes
 through the same tensor position the loss optimizes. Decoding it by parsing
 generated text would answer from a different decision function entirely.
+
+## Acknowledgements
+https://github.com/IBM/AssetOpsBench/tree/ijcai_2026_competition
+
+```bibtex
+@misc{industrial-automation-challenge-track-1,
+    author = {Prateek Biswas},
+    title = {Industrial Automation Challenge - Track 1},
+    year = {2026},
+    howpublished = {\url{https://kaggle.com/competitions/industrial-automation-challenge-track-1}},
+    note = {Kaggle}
+}
