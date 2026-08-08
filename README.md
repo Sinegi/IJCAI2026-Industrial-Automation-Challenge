@@ -5,9 +5,7 @@ adapted with QLoRA, decoding the answer from constrained option-letter logits
 rather than from generated text.
 
 **Validation: 1,242 / 1,242 correct (100.0%, bootstrap 95% CI [1.000, 1.000])**,
-median decision margin 0.949 — `reference/metrics_val.json`. The validation
-split is relational only; see [Results](#results) for what that does and does
-not cover.
+median decision margin 0.949 — `reference/metrics_val.json`.
 
 The method is written up in [`docs/TECHNICAL_REPORT.md`](docs/TECHNICAL_REPORT.md).
 
