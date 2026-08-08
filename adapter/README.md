@@ -22,24 +22,29 @@ plausible-looking submission that is silently wrong.
 
 They are published as a Kaggle dataset:
 
-[<https://www.kaggle.com/datasets/eunmochoi/eq-track1-lora>](https://kaggle.com/datasets/8a08092f6f9b1604976739d5300213d3c67ef2cdb8fc4ce87d33a581f85bf219)
+<https://www.kaggle.com/datasets/eunmochoi/eq-track1-lora>
 
 The dataset is **private**, so the link resolves only for accounts it has been
 shared with — competition reviewers are granted access alongside the notebook.
 It is not a broken link.
 
-With the Kaggle CLI authenticated:
+Download it with `kagglehub`:
 
 ```bash
-kaggle datasets download -d eunmochoi/eq-track1-lora -p adapter --unzip
+pip install kagglehub
+KAGGLE_API_TOKEN=<your Kaggle API token> python - <<'PY'
+import shutil
+from pathlib import Path
+import kagglehub
+
+source = Path(kagglehub.dataset_download("eunmochoi/eq-track1-lora"))
+target = Path("adapter"); target.mkdir(exist_ok=True)
+for name in ("adapter_config.json", "adapter_model.safetensors", "chat_template.jinja",
+             "csreg_config.json", "tokenizer.json", "tokenizer_config.json"):
+    shutil.copy2(source / name, target / name)
+print("adapter ready in", target)
+PY
 ```
-
-Or point the predictor somewhere else without copying anything:
-
-```bash
-EQ_ADAPTER=/path/to/adapter bash run.sh test
-```
-
 ## Identity
 
 | | |
