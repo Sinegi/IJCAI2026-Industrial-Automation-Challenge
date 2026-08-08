@@ -5,7 +5,7 @@
     "description": "Industrial Automation Challenge validation questions"
   },
   "predictor": {
-    "path": "eq_predictor.py:predict"
+    "path": "predictor.py:predict"
   },
   "submission_columns": [
     "id",

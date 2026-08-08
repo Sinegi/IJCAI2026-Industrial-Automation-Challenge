@@ -5,7 +5,7 @@
     "description": "Industrial Automation Challenge test questions"
   },
   "predictor": {
-    "path": "eq_predictor.py:predict"
+    "path": "predictor.py:predict"
   },
   "submission_columns": [
     "id",

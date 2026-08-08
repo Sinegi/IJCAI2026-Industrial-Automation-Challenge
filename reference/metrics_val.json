@@ -1,22 +1,22 @@
 {
   "n": 1242,
-  "accuracy": 0.9927536231884058,
-  "accuracy_percent": 99.27536231884058,
+  "accuracy": 1.0,
+  "accuracy_percent": 100.0,
   "bootstrap_95_ci": [
-    0.9879227053140096,
-    0.9967793880837359
+    1.0,
+    1.0
   ],
-  "macro_asset_accuracy": 0.9919115794228117,
-  "macro_family_accuracy": 0.9954229797979798,
+  "macro_asset_accuracy": 1.0,
+  "macro_family_accuracy": 1.0,
   "tta_permutations": 1,
   "simulate_test": false,
-  "adapter": "runs/EQ_csreg_NOTA_GEN_ddp2/final_adapter",
+  "adapter": "runs/EQ_csreg_SEED_SOUP3/final_adapter",
   "decision_path": "letter_logits",
-  "margin_median": 0.9472091197967529,
+  "margin_median": 0.9490438103675842,
   "slices": {
     "all": {
       "n": 1242,
-      "accuracy": 99.27536231884058
+      "accuracy": 100.0
     },
     "family:negation_failure_to_sensor": {
       "n": 192,
@@ -28,7 +28,7 @@
     },
     "family:positive_failure_to_sensor": {
       "n": 330,
-      "accuracy": 97.87878787878788
+      "accuracy": 100.0
     },
     "family:positive_failure_to_sensor_nota": {
       "n": 104,
@@ -36,7 +36,7 @@
     },
     "family:positive_sensor_to_failure": {
       "n": 320,
-      "accuracy": 99.375
+      "accuracy": 100.0
     },
     "family:positive_sensor_to_failure_nota": {
       "n": 96,
@@ -44,7 +44,7 @@
     },
     "group:relation": {
       "n": 1242,
-      "accuracy": 99.27536231884058
+      "accuracy": 100.0
     }
   }
 }

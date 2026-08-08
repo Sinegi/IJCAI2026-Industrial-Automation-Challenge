@@ -1,18 +1,29 @@
-# Industrial Automation Challenge - Simple Starter Kit
+# Industrial Automation Challenge — Track 1, inference
 #
-# The starter-kit runner uses only the Python standard library.
-# Add your model, agent, or notebook dependencies here as needed.
+# The organizers' runner (run.py / eval_framework.py / dataset_utils.py) uses
+# only the standard library. Everything below is for predictor.py.
 #
-# --- EQ / fsiq_csreg predictor (eq_predictor.py), Python >= 3.10 ---
-# Versions verified on the eq_vllm conda env this was built in:
-# torch 2.11.0+cu129, transformers 5.14.1, peft 0.19.1, bitsandbytes 0.49.2.
+# Python >= 3.10.
+
 torch>=2.4
-transformers>=4.48,<6
-peft>=0.14,<1
 accelerate>=1.2,<2
-bitsandbytes>=0.45
-numpy>=1.26
-pandas>=2.2
-pyyaml>=6.0
-tqdm>=4.66
 safetensors>=0.4
+tqdm>=4.66
+
+# Qwen3 support landed in transformers 4.51.
+#
+# 5.0.x is excluded deliberately: its checkpoint loader materialises the model
+# at full precision before the 4-bit quantiser shrinks anything. Measured peak
+# GPU memory loading Qwen3-8B in 4-bit is 5.75 GB on 5.14.1 against more than
+# 14.4 GB on 5.0.0, so on a 16GB card 5.0.x cannot load this model at all.
+transformers>=4.51,!=5.0.*,<6
+
+# 0.19 is the version that wrote adapter/adapter_config.json; older releases
+# reject keys that file contains.
+peft>=0.19,<1
+
+# 4-bit NF4 loading.
+bitsandbytes>=0.46.1
+
+# Versions this was verified on: torch 2.11.0+cu129, transformers 5.14.1,
+# peft 0.19.1, bitsandbytes 0.49.2.
