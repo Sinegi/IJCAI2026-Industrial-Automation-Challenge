@@ -104,23 +104,7 @@ the exact string the logits were read against, so the two cannot disagree.
 | Reference prediction file | `reference/submission.csv` (3,048 rows)                 |
 | Runtime                   | 653 s for 3,048 items on one A100 40GB, batch 64, bf16  |
 
-Two limitations belong next to that number.
 
-**The validation split contains relational items only.** It has no counterpart
-to the 290 general industrial-engineering items in the test set, so that portion
-is unmeasured by our own held-out data.
-
-**A few test items are effectively ties.** The decision margin over the test set
-has median 0.949 but minimum 0.000. Those can flip under numerical differences —
-notably on a GPU without bfloat16, where the 4-bit compute path falls back to
-fp16. Re-runs can be diffed against `reference/submission.csv` to measure it.
-
-## Acknowledgements
-
-<https://github.com/IBM/AssetOpsBench/tree/ijcai_2026_competition>
-`eq_predictor.py` reads that back from `adapter/csreg_config.json` and decodes
-through the same tensor position the loss optimizes. Decoding it by parsing
-generated text would answer from a different decision function entirely.
 
 ## Acknowledgements
 https://github.com/IBM/AssetOpsBench/tree/ijcai_2026_competition
