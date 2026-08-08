@@ -118,6 +118,12 @@ fp16. Re-runs can be diffed against `reference/submission.csv` to measure it.
 ## Acknowledgements
 
 <https://github.com/IBM/AssetOpsBench/tree/ijcai_2026_competition>
+`eq_predictor.py` reads that back from `adapter/csreg_config.json` and decodes
+through the same tensor position the loss optimizes. Decoding it by parsing
+generated text would answer from a different decision function entirely.
+
+## Acknowledgements
+https://github.com/IBM/AssetOpsBench/tree/ijcai_2026_competition
 
 ```bibtex
 @misc{industrial-automation-challenge-track-1,
