@@ -105,16 +105,3 @@ the exact string the logits were read against, so the two cannot disagree.
 | Runtime                   | 653 s for 3,048 items on one A100 40GB, batch 64, bf16  |
 
 
-
-## Acknowledgements
-https://github.com/IBM/AssetOpsBench/tree/ijcai_2026_competition
-
-```bibtex
-@misc{industrial-automation-challenge-track-1,
-    author = {Prateek Biswas},
-    title = {Industrial Automation Challenge - Track 1},
-    year = {2026},
-    howpublished = {\url{https://kaggle.com/competitions/industrial-automation-challenge-track-1}},
-    note = {Kaggle}
-}
-```
