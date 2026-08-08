@@ -20,11 +20,18 @@ plausible-looking submission that is silently wrong.
 
 ## Getting the files
 
-They are published as a Kaggle dataset, `eq-track1-lora`. With the Kaggle CLI
-authenticated:
+They are published as a Kaggle dataset:
+
+[<https://www.kaggle.com/datasets/eunmochoi/eq-track1-lora>](https://kaggle.com/datasets/8a08092f6f9b1604976739d5300213d3c67ef2cdb8fc4ce87d33a581f85bf219)
+
+The dataset is **private**, so the link resolves only for accounts it has been
+shared with — competition reviewers are granted access alongside the notebook.
+It is not a broken link.
+
+With the Kaggle CLI authenticated:
 
 ```bash
-kaggle datasets download -d <owner>/eq-track1-lora -p adapter --unzip
+kaggle datasets download -d eunmochoi/eq-track1-lora -p adapter --unzip
 ```
 
 Or point the predictor somewhere else without copying anything:
