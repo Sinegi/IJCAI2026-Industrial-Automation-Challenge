@@ -1,7 +1,7 @@
 # Industrial Automation Challenge
 >🥈🎉 2nd Place — Industrial Automation Challenge, Track 1
 
-This repository contains the inference code and submission artifacts for our **2nd-place solution** in Track 1 of the Industrial Automation Challenge.
+This repository contains the inference code and submission artifacts for our **2nd-place solution** in Track 1 of the [Industrial Automation Challenge](https://sites.google.com/view/ai-industrial-challenge-ijcai/home).
 
 
 Inference code and submission artifacts for our Track 1 entry: `Qwen/Qwen3-8B`
