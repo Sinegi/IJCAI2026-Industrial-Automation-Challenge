@@ -1,4 +1,8 @@
-# Industrial Automation Challenge — Track 1
+# Industrial Automation Challenge
+>🥈🎉 2nd Place — Industrial Automation Challenge, Track 1
+
+This repository contains the inference code and submission artifacts for our **2nd-place solution** in Track 1 of the Industrial Automation Challenge.
+
 
 Inference code and submission artifacts for our Track 1 entry: `Qwen/Qwen3-8B`
 adapted with QLoRA, decoding the answer from constrained option-letter logits
